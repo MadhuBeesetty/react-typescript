@@ -1,10 +1,13 @@
 import * as React from 'react';
 
-class Child1 extends React.Component {
+export interface Child1Props { name: string; whenIsNextSeason: string;}
+
+class Child1 extends React.Component<Child1Props> {
   public render() {
     return (
       <div>
-       <h1>winter is coming</h1>
+       <h1>{this.props.name}</h1>
+       <p>When is the next season :{this.props.whenIsNextSeason}</p>
       </div>
     );
   }
