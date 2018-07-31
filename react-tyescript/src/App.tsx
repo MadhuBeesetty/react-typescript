@@ -4,10 +4,12 @@ import Child1 from './components/child1';
 import Child2 from './components/Child2';
  
 class App extends React.Component {
-Constructor(){
+public Constructor(text:string, textArray:string[], yes:number, no:number){
 this.state={
   text:'',
-  textArray:''
+  textArray:'',
+  yes:0,
+  no:0
 }
 }
 
@@ -15,7 +17,7 @@ this.state={
     return (
       <div>
        <h1>winter is coming</h1>
-       <Child1 name={'game of thrones'} whenIsNextSeason={'everyone is waiting'} />
+       <Child1 yes={this.state.yes} no={this.state.no}  whenIsNextSeason={'everyone is waiting'} />
       <Child2 />
       </div>
     );
